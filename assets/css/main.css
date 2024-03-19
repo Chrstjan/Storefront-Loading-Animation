@@ -128,6 +128,64 @@ footer section {
   flex: 1;
 }
 
+/*Dots are reversed
+dotOne = last dot  */
+#app #Dots #dotOne{
+  animation: dotJump 0.5s 0.8s linear infinite;
+}
+
+#Dots #dotTwo {
+  animation: dotJump 0.5s 1.5s linear infinite;
+}
+
+#Dots #dotThree {
+  animation: dotJump 0.5s 0s linear infinite;
+}
+
+@keyframes dotJump {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  33.3% {
+    transform: translateY(-30px);
+  }
+
+  66.6% {
+    transform: translateY(0px);
+  }
+}
+
+/*#region Old HTML CSS Animation */
+/* #app .animation-container .spin-animation {
+  border: 10px solid #aaa;
+  padding: 7rem;
+  border-top: 10px solid #555;
+  border-radius: 50%;
+  animation: loadingSpin 1.4s linear infinite
+}
+
+@keyframes loadingSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+.animation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-container h2 {
+  padding-top: 1rem;
+}
+/*#endregion Old HTML CSS Animation */
+
 #basketIcon {
   max-width: 60px;
   aspect-ratio: 1/1;

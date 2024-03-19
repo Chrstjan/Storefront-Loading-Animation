@@ -92,7 +92,7 @@ function ReadLocalStorageData() {
 
 
 function InitApp() {
-
+    buildLoadingScreen();
     InitializeBasket()
     GetProductData()
     GetCategoryData()
@@ -254,6 +254,7 @@ function ProductsRecived(productData) {
 function NavCallback(CategoryName) {
     //console.log(CategoryName);
     CloseMobileNav()
+    buildLoadingScreen();
     // get data from API  bug API url og send videre
     if (CategoryName == "All") {
         CreateProductView(myProducts)
@@ -271,6 +272,7 @@ function NavCallback(CategoryName) {
 //----------------------------------------------------------------------
 
 function ProductCallback(myId) {
+
 
     //console.log(myId);
     let myClickedProduct = null
@@ -301,6 +303,7 @@ function ProductCallback(myId) {
 //----------------------------------------------------------------------
 
 function LogoCallback() {
+    buildLoadingScreen();
     GetProductData()
 }
 
@@ -450,6 +453,38 @@ function ToggleMenu() {
 
 
 /* view code------------------------------------------------------------- */
+
+function buildLoadingScreen() {
+    // let loadingAnimation = `
+    // <div class="animation-container">
+    //     <div class="spin-animation"></div>
+    //     <h2>Loading...</h2>
+    // </div>`;
+    let loadingAnimation = `<?xml version="1.0" encoding="utf-8"?>
+    <svg version="1.1" id="Dots" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+    <g id="dotThree">
+        <circle cx="136.5" cy="241.5" r="45"/>
+        <path d="M136.5,197c24.54,0,44.5,19.96,44.5,44.5c0,24.54-19.96,44.5-44.5,44.5S92,266.04,92,241.5C92,216.96,111.96,197,136.5,197
+             M136.5,196c-25.13,0-45.5,20.37-45.5,45.5s20.37,45.5,45.5,45.5s45.5-20.37,45.5-45.5S161.63,196,136.5,196L136.5,196z"/>
+    </g>
+    <g id="dotTwo">
+        <circle cx="244.5" cy="241.5" r="45"/>
+        <path d="M244.5,197c24.54,0,44.5,19.96,44.5,44.5S269.04,286,244.5,286S200,266.04,200,241.5S219.96,197,244.5,197 M244.5,196
+            c-25.13,0-45.5,20.37-45.5,45.5s20.37,45.5,45.5,45.5s45.5-20.37,45.5-45.5S269.63,196,244.5,196L244.5,196z"/>
+    </g>
+    <g id="dotOne">
+        <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -66.6428 322.1101)" cx="355.5" cy="241.5" rx="45" ry="45"/>
+        <path d="M355.5,197c24.54,0,44.5,19.96,44.5,44.5c0,24.54-19.96,44.5-44.5,44.5S311,266.04,311,241.5
+            C311,216.96,330.96,197,355.5,197 M355.5,196c-25.13,0-45.5,20.37-45.5,45.5c0,25.13,20.37,45.5,45.5,45.5s45.5-20.37,45.5-45.5
+            C401,216.37,380.63,196,355.5,196L355.5,196z"/>
+    </g>
+    </svg>
+    `;
+ 
+    productSection.innerHTML = loadingAnimation;
+    // productSection.appendChild(container);
+}
 
 function ShowMobileNav() {
 
