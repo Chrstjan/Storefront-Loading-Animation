@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* .lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+} */
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.logo {
+  max-width: 100px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(255, 106, 0);
+  color: antiquewhite;
+  border: 0px;
+  padding: 1em;
+}
+
+button:hover {
+  background-color: rgb(122, 52, 2);
+}
+
+footer {
+  background-color: rgb(255, 106, 0);
+  color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+footer section {
+  max-width: 27%;
+  margin: 2rem;
+  overflow-wrap: break-word;
+}
+
+#app {
+  flex: 1;
+}
+
+#basketIcon {
+  max-width: 60px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+#navigation {
+  background-color: rgb(255, 106, 0);
+}
+
+.menuListsLook {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+#navIcon {
+  max-width: 40px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.navCategories {
+  color: antiquewhite;
+  margin-right: 2em;
+  display: inline-block;
+}
+
+.navCategories h3 {
+  font-size: 2rem;
+  border-bottom: 1px solid white;
+}
+
+.navCategories ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.navCategories li {
+  font-size: 1em;
+}
+
+.navRollover {
+  background-color: rgb(255, 106, 0);
+  cursor: pointer;
+}
+
+.navRollover:hover {
+  background-color: rgb(122, 52, 2);
+}
+
+#featuredProducts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#featuredProducts figure {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  max-width: 300px;
+  aspect-ratio: 4/5;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.13);
+  margin: 1em;
+}
+
+#featuredProducts img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+#featuredProducts button {
+  align-self: flex-end;
+}
+
+.productDetails {
+}
+
+.productDetails figure {
+  min-width: 100px;
+
+  background-color: rgb(245, 245, 245);
+  box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.13);
+  margin: 1em;
+}
+
+.productDetails img {
+  display: inline-block;
+}
+
+#basketWiev {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 1em;
+  margin-bottom: 4rem;
+}
+
+#basketWiev section {
+  width: 90%;
+}
+
+#basketWiev figure {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 300px;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+#basketWiev img {
+  height: 100px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+#basketWiev button {
+  height: 20px;
+}
+@media only screen and (max-width: 600px) {
+  footer {
+    background-color: rgb(255, 106, 0);
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer section {
+    max-width: 100%;
+    margin: 2rem;
+    overflow-wrap: break-word;
+  }
+}
+
+.hidden {
+  display: none;
+}
