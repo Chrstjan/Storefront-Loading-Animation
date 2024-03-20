@@ -128,32 +128,31 @@ footer section {
   flex: 1;
 }
 
-/*Dots are reversed
-dotOne = last dot  */
-#app #Dots #dotOne{
-  animation: dotJump 0.5s 0.8s linear infinite;
-}
-
-#Dots #dotTwo {
-  animation: dotJump 0.5s 1.5s linear infinite;
-}
-
-#Dots #dotThree {
-  animation: dotJump 0.5s 0s linear infinite;
-}
-
 @keyframes dotJump {
-  0%, 100% {
+  0% {
     transform: translateY(0px);
   }
 
-  33.3% {
+  50% {
     transform: translateY(-30px);
   }
 
-  66.6% {
+  100% {
     transform: translateY(0px);
   }
+}
+
+/*Dot id's are reversed dotOne = last dot */
+#app #Dots #dotOne {
+  animation: dotJump 1s 1.3s linear infinite;
+}
+
+#Dots #dotTwo {
+  animation: dotJump 1s 0.8s linear infinite;
+}
+
+#Dots #dotThree {
+  animation: dotJump 1s 0s linear infinite;
 }
 
 /*#region Old HTML CSS Animation */
